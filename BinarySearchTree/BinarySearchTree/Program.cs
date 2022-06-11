@@ -24,7 +24,8 @@ namespace BinarySearchTree
 
             binarySearch.Display();
             binarySearch.GetSize();
-
+            bool result = binarySearch.IfExists(67, binarySearch);
+            Console.WriteLine(result);
         }
     }
 
