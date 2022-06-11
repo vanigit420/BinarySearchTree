@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinarySearch_Tree
+namespace BinarySearchTree
 {
     public class BinarySearchTree<T> where T : IComparable<T>
     {
@@ -23,7 +23,7 @@ namespace BinarySearch_Tree
         public void Insert(T item)
         {
             T currentNodeValue = this.NodeData;
-            if (currentNodeValue.CompareTo(item) > 0)
+            if ((currentNodeValue.CompareTo(item)) > 0)
             {
                 if (this.LeftTree == null)
                     this.LeftTree = new BinarySearchTree<T>(item);
@@ -40,6 +40,7 @@ namespace BinarySearch_Tree
         }
         public void Display()
         {
+
             if (this.LeftTree != null)
             {
                 this.leftCount++;
@@ -50,12 +51,13 @@ namespace BinarySearch_Tree
             {
                 this.rightCount++;
                 this.RightTree.Display();
-
             }
         }
         public void GetSize()
         {
-            Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
+            Console.WriteLine("Size"+" "+(1 + this.leftCount + this.rightCount));
+
         }
+
     }
 }
